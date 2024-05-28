@@ -132,6 +132,7 @@ const homeLo = async (req, res) => {
     let images = banner_view;
     console.log(images);
     const userData = await User.findOne();
+    console.log(userData)
     res.render("user/home.ejs", { userData, images });
   } catch (error) {
     console.log(error.message);
